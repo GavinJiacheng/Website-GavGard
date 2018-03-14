@@ -1,0 +1,286 @@
+
+html,body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+}
+
+ul.horizontal {
+  list-style:none;
+}
+
+.cwhite a:hover {color: #A9A9A9}
+
+.cwhite a{
+  color:white;
+  text-decoration:none
+}
+
+
+.right {
+  float:right;
+  margin-right: 2%;
+}
+.bottomleft {
+  display:inline;
+}
+
+.bottomleft a{
+  font-size:25px;
+  padding:0.2em 0.6em;
+  float:left;
+  color: Crimson ;
+  text-decoration: none;
+  width:12em;
+}
+
+#window {
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  position:relative;
+  height:22em;
+  width:95%;
+  overflow:auto;
+  background:#BDE2FC;"
+}
+
+#window div{
+  text-align:left;
+}
+
+#window2{
+  left: 50%;
+  transform: translateX(-50%);
+  position:relative;
+  height:100%;
+  width:95%;
+  background:White;"
+}
+
+
+.bottomleft a:hover {color: white; background-color:Crimson}
+
+#header-top-right {
+  position: relative;
+  bottom: 0.5em;
+}
+
+
+#container {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  float: left;
+  width: 100%;
+  max-width: 1520px;
+  background-color: GhostWhite;
+  z-index:100;
+  top:0;
+  left: 50%; /* 50% means at the mid*/
+  transform: translateX(-50%);
+  clear:left;
+}
+
+#header-middle{
+  background-color: white;
+}
+
+#header-bottom{
+  position: relative;
+}
+
+#header-bottom ul{
+  padding:0;
+  margin:0;
+}
+
+#play{
+  position: relative;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  cursor:pointer;
+  float:left;
+  background: url("img/pause.png") round ;
+  height: 18px;
+  width: 18px;
+  bottom: 6px;
+  left: 8px;
+}
+
+#googlesearch{
+  float:right;
+  position: relative;
+  top: 30px;
+}
+
+
+#header-top {
+float: left;
+width: 100%;
+background-color: #54585A;
+}
+
+#txt{
+  position: absolute;
+  float: left;
+  width: 100%;
+  max-width: 1520px;
+  z-index:1;
+  top:168px;
+  left: 50%; /* 50% means at the mid*/
+  transform: translateX(-50%);
+  clear:left;
+}
+
+.introduction{
+  background-color: #DCDCDC;
+  width: 100%;
+}
+
+footer
+{
+  position: fixed;
+  text-align:center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color:white;
+  background-color:gray;
+  width: 100%;
+  max-width: 1520px;
+  clear:left;
+  bottom:0px;
+  left: 50%; /* 50% means at the mid*/
+  transform: translateX(-50%);
+  clear:left;
+  z-index:100;
+  }
+
+#leftside
+{
+  font-size: 30px;
+  width:23%;
+  float:left;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #D6EAF8;
+}
+
+#content
+{
+  width: 70%;
+  word-break:break-all;
+  word-wrap:break-word;
+  float:left;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.leftlist{
+  color: 	#6495ED;
+  cursor:pointer;
+}
+
+h1.stroke {
+  -webkit-text-stroke: 5px black;
+  text-stroke: 5px black;
+}
+
+.leftlist:visited {color: #00FF00}
+.leftlist:hover {color: #FF69B4}
+.leftlist:active {color: #0000FF}
+
+div.box {
+  float:left;
+  text-align:center;
+  font-size: 45px;
+  width:42%;
+  max-width: 600px;
+  max-height: 55px;
+  margin: 3%;
+  margin-left: 6%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #ffffcc;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+div.fullbox{
+  text-align:center;
+  font-size: 25px;
+  width:100%;
+  max-width: 1520px;
+  margin-top: 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #ffffcc;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#Thor {
+  position: relative;
+  left:0px;
+  background-color:
+  transparent;
+  margin-top:200px;
+}
+
+div.gamebox {
+  text-align:center;
+  border:10px solid black;
+  height:800px;
+  width:auto;
+  background-color:lightblue;
+}
+
+.jstest{
+  color: Blue;
+  cursor:pointer;
+}
+
+.login td{
+  padding: 5px;
+}
+.login input{
+  width:100%;
+  max-width: 400px;
+  height:30px;
+}
+
+.menushow ul{
+    position: absolute;
+    display: none;
+    list-style:none;
+    padding:0px;
+}
+
+.menushow:hover ul {
+   display: block;
+}
+
+.menushow > ul > li > a {
+    width: 80px;
+    line-height: 30px;
+    color: #456;
+    background-color: #eff;
+    text-align: center;
+    display: block;
+    border:0;
+}
+
+.menushow > ul > li > a:hover {
+  color: yellow;
+  background-color: grey;
+}
+
+
+.jstest:visited {color: purple}
+.jstest:hover {color: grey}
