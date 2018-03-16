@@ -12,8 +12,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>GavGard-Ragnarok</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css" >
   </head>
-    <%@ include file="head.jsp" %>
-        <div id = "txt" style="position: fixed">
+  <body background="img/Background.jpg" onkeydown = "checkaction(event)" onkeyup = "stopmoving(event)">
+    <%@ include file="specialhead.jsp" %>
+        <div id = "txt" style="position: fixed" onkeydown = "checkaction(event)" onkeyup = "stopmoving(event)">
           <div class = "gamebox"   >
           <h2 style = "clear: left"> Ragnarok </h2>
           <p> please press 'x' to attack, and press directiion keys to move! </p>

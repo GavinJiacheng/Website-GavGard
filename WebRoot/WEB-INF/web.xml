@@ -21,6 +21,10 @@
 		<servlet-name>OutServlet</servlet-name>
 		<servlet-class>com.gg.loginServlet.OutServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>MessageBoardServlet</servlet-name>
+		<servlet-class>com.gg.MessageBoardServlet.MessageServlet</servlet-class>
+	</servlet>
 
 
 
@@ -39,6 +43,10 @@
 	<servlet-mapping>
 		<servlet-name>OutServlet</servlet-name>
 		<url-pattern>/OutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MessageBoardServlet</servlet-name>
+		<url-pattern>/MessageBoardServlet</url-pattern>
 	</servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

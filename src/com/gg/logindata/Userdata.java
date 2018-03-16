@@ -106,7 +106,7 @@ public class Userdata {
 	}
 
 	public User searchnickname(String nickname){
-		String sql = "select * from user where nickname=?";
+		String sql = "SELECT * FROM user WHERE nickname=?";
 		Connection con =getConnection();
 		PreparedStatement pstmt =null;
 		ResultSet rs = null;
@@ -134,18 +134,13 @@ public class Userdata {
 		return user;
 	}
 }
-	//public static void main(String[] args) {
-		//test
-//		System.out.println(new Userdata().findUser("123"));
-//		new Userdata().addUser("1345", "1345");
-	//}
 
 /*
  * database
   CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) DEFAULT NULL UNIQUE,
-	`nickname` varchar(255) DEFAULT NULL UNIQUE,
+  `nickname` varchar(255) DEFAULT NULL UNIQUE,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

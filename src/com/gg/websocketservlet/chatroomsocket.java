@@ -1,6 +1,5 @@
 package com.gg.websocketservlet;
 
-import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.Date;
 import java.text.SimpleDateFormat;

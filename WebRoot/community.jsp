@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <a href = "chatroom.jsp" title = "Chatroom" style = " font-size:35px;"> Chatroom </a>
         </div>
         <div  class = "box">
-          <a href = "index.jsp" title = "Chatroom" style = " font-size:35px;"> Message Board </a>
+          <a href = "Messageboard.jsp" title = "Chatroom" style = " font-size:35px;"> Message Board </a>
         </div>
       </div>
       <%@ include file="end.jsp" %>
