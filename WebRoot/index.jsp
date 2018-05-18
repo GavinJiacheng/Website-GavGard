@@ -5,68 +5,127 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE html>
-<html>
-  <head>
+<!-- saved from url=(0054)https://getbootstrap.com/docs/4.1/examples/jumbotron/# -->
+<html lang="en" class="gr__getbootstrap_com">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href="<%=basePath%>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
     <title>GavGard</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css" >
-    <title>GavGard-Log in</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Bootstrap/jumbotron.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 3.5rem;
+      }
+    </style>
+
   </head>
-  <body background="img/Background.jpg">
-    <div id = "container">
-      <div id = "page">
-        <audio id="myAudio" autoplay="autoplay" loop = "loop">
-          <source src="music/The Fellowship of the Ring Soundtrack-11-The Ring Goes South.ogg" type="audio/ogg" />
-          <source src="music/The Fellowship of the Ring Soundtrack-11-The Ring Goes South.mp3" type="audio/mpeg" />
-        </audio>
-        <header>
-          <div id = "header-top">
-            <div id = "header-top-right">
-                <ul class = "horizontal">
-                  <li class = "right cwhite menushow"> <a href = "https://github.com/Jiachenggavin" title = "Gavin's Git"> Gavin's Git </a>
-                  </li>
-                  <%
-                  if(session.getAttribute("nickname") == null) {
-                    out.println("<li class = 'right cwhite'> <a href = 'signup.jsp' title = 'Sign up'> Sign up </a>");
-                    out.println("</li>");
-                    out.println("<li class = 'right cwhite'> <a href = 'login.jsp' title = 'Log in'> Log in </a>");
-                    out.println("</li>");
-                  }
-                  else{
-                    out.println("<li class = 'right cwhite menushow'> <a href = 'index.jsp' title = 'Userinfo'> Welcome! " + session.getAttribute("nickname") + "   </a>");
-                    out.println("<ul>");
-                    out.println("<li><a href='/OutServlet'>Sign out</a></li>");
-                    out.println("</ul>");
-                    out.println("</li>");
-                  }
-                  %>
-                </ul>
+
+  <body data-gr-c-s-loaded="true">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./index.jsp">GavGard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="introduction.jsp">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="JavascrpitTest.jsp">Web Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Ragnarok.jsp">Game:Ragnarok</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-target="#" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="chatroom.jsp">Chatroom</a>
+              <a class="dropdown-item" href="Messageboard.jsp">Message Board</a>
             </div>
-            <div id = "play" onclick="playAudio()"></div>
-          </div>
-          <div id = "header-middle">
-              <a href = "./index.jsp" title = "home" ><img src="./img/logo.png"/> </a>
-              <form id = "googlesearch" class = "right" method="get" action="https://www.google.ca/search?q=" target="_blank">
-                Search Google:
-                  <input type="text" name="q" maxlength="255" placeholder="Search in Google">
-                  <input type = "submit", value="Search">
-              </form>
-          </div>
-          <div class = "header-middle">
-          <div id = "header-bottom">
-            <ul class = "horizontal">
-              <li class = "bottomleft "><a href = "introduction.jsp" title = "INTRODUCTION"> INTRODUCTION </a>
-              <li class = "bottomleft "><a href = "JavascrpitTest.jsp" title = "JAVASCRIPT EXAMPLE"> JAVASCRIPT EXAMPLE </a>
-              <li class = "bottomleft "><a href = "Ragnarok.jsp" title = "RAGNAROK"> RAGNAROK </a>
-              <li class = "bottomleft "><a href = "community.jsp" title = "COMMUNITY"> COMMUNITY </a>
-              </ul>
-            </div>
-          </div>
-        </header>
-        <div id = "txt">
-          <h1 class ="stroke" style="text-align:center; font-size:200px; color: white;"> Welcome to GavGard! </h1>
+          </li>
+        </ul>
+        <a class="text-muted" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+          </a>
+
+          <%
+          if(session.getAttribute("nickname") == null) {
+            out.println("<a class='btn btn-primary mr-sm-2'  href='login.jsp'>Log in</a>");
+            out.println("<a class='btn btn-primary mr-sm-2'  href='signup.jsp'>Sign up</a>");
+          }
+          else{
+            out.println("<li class='nav-item dropdown'>");
+            out.println("<a class='btn btn-primary mr-sm-2 dropdown-toggle' id='dropdown01' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>You</a>'");
+            out.println("<div class='dropdown-menu' aria-labelledby='dropdown02'>");
+            out.println("<a class='dropdown-item' href='/OutServlet'> Sign out</a>");
+            out.println("</div></li>");
+          }
+          %>
+      </div>
+    </nav>
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Welcome to GavGard!!</h1>
+          <p>This is Gavin's website. It will show all information Gavin knows about computer science.
+          </br> Bootstrap makes this home page. Other pages on this website are using the CSS and JavaScript directly without any other technique.
+          </br> All pages will have the same style as this home page in the future.</p>
+          <p><a class="btn btn-primary btn-lg" href="introduction.jsp" role="button">Learn more »</a></p>
         </div>
-      <%@ include file="end.jsp" %>
-      <script src="js/myjs.js"></script>
-    </body>
-  </html>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Chatroom</h2>
+            <p>This is a simple chatroom which you can talk with others in this website. </p>
+            <p><a class="btn btn-secondary" href="chatroom.jsp" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Leave Your Messages</h2>
+            <p>Want to leave your messages to others? Click here! </p>
+            <p><a class="btn btn-secondary" href="Messageboard.jsp" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Ragnarok</h2>
+            <p>Ragnarok is a very small website game which is made by JavaScript and HTML5. Want to play? Click here! </p>
+            <p><a class="btn btn-secondary" href="Ragnarok.jsp" role="button">View details »</a></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>© GavGard 2018 by Jiacheng Xu.</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="./Bootstrap/bootstrap.min.js"></script>
+
+
+</body></html>
