@@ -8,7 +8,6 @@ var thor = document.getElementById('Thor')
 var isattacking = 0
 var attackspeed = 620
 
-
 function checkaction(event)
 {
   if (event.keyCode == 	88)
@@ -22,6 +21,9 @@ function checkaction(event)
     var feet = (event.keyCode - 38) * speed;
     move (feet);
   }
+  var a = thor.offsetLeft;
+  a-=590;
+  document.getElementById("demo").innerHTML="the coordinate is " + a;
 }
 
 function stopmoving (event)
@@ -69,11 +71,5 @@ function move(feet){
     thor.src ="Ragnarok/viking/walking.gif";
     iswalking =1;
   }
-  movethor(feet);
-}
-
-function movethor(x){
-  $("#Thor").animate({
-    left: '+='+x+'px'
-  }, 0)
+  thor.style.left =  (thor.offsetLeft - 590 +feet) +"px";
 }
