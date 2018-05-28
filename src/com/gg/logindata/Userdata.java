@@ -91,6 +91,7 @@ public class Userdata {
 				user.setUsername(rs.getString("username"));
 				user.setnickname(rs.getString("nickname"));
 				user.setUserpass(rs.getString("password"));
+				user.setid(rs.getInt("id"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -120,6 +121,7 @@ public class Userdata {
 				user.setUsername(rs.getString("username"));
 				user.setnickname(rs.getString("nickname"));
 				user.setUserpass(rs.getString("password"));
+				user.setid(rs.getInt("id"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -134,6 +136,40 @@ public class Userdata {
 		return user;
 	}
 }
+
+/*
+public User searchUserID(int ID){
+	String sql = "select * from user where id=?";
+	Connection con =getConnection();
+	PreparedStatement pstmt =null;
+	ResultSet rs = null;
+	User user = null;
+	try {
+		pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, ID);
+		rs = pstmt.executeQuery();
+		if(rs.next()){
+			user = new User();
+			user.setUsername(rs.getString("username"));
+			user.setnickname(rs.getString("nickname"));
+			user.setUserpass(rs.getString("password"));
+			user.setid(rs.getInt("id"));
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}finally {
+		try {
+			if(pstmt!=null)pstmt.close();
+			if(con!=null)con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return user;
+}
+
+*/
+
 
 /*
  * database

@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <div id="window2">
                 <br/>
               <textarea id="chat" rows="6" cols="100"></textarea><br/>
-              <button onclick="send()">Send message</button><br/><br/>
+              <button onclick="send(<%=(String)session.getAttribute("nickname")%>)">Send message</button><br/><br/>
               </div>
             </div>
         </div>

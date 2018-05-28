@@ -2,9 +2,17 @@ package com.gg.logindata;
 
 public class User {
 
+  int id;
   private String username;
   private String userpass;
   private String nickname;
+
+  public int getid() {
+    return id;
+  }
+  public void setid(int id){
+    this.id = id;
+  }
   public String getUsername() {
       return username;
   }

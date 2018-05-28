@@ -1,4 +1,4 @@
-var websocket = new WebSocket("ws://159.89.124.219//chatroom");
+var websocket = new WebSocket("ws://localhost:8080/chatroom");
 websocket.onerror = function () {
 		 setMessageInnerHTML("Error happen, cannot connect to the server.");
 };
@@ -14,10 +14,15 @@ websocket.onopen = function () {
  function setMessageInnerHTML(innerHTML) {
 		document.getElementById('message').innerHTML += innerHTML + '<br/>';
 }
- function send() {
+function send(name) {
+	if (name == null) {
+			var username = "GUEST";
+	}else {
+		var username = name;
+	}
 		var message = document.getElementById('chat').value;
 		if (message != ""){
-			websocket.send(message);
+			websocket.send(username+": "+message);
 			document.getElementById('chat').value = "";
 		}
  }
