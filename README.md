@@ -6,22 +6,24 @@ A website application which is written in Java and Using Tomcat to build this we
 
 It contains three primary functions now.
 
+I deleted some bootstrap files, if there are some bugs happen. Just download whole bootstrap files to the bootstrap folder. 
+
 # Message Board
 
 http://159.89.124.219/Messageboard.jsp
 
 
-Using MySQL to store the information of messages. Now it can show the title, text, writer and time. 
+Using MySQL to store the information of messages. Now it can show the title, text, writer and time.
 
 Will add delete function in the future.
 
-# Chatroom 
+# Chatroom
 http://159.89.124.219/chatroom.jsp
 
 Using websocket to create page.
 I know its UI is very bad. I will improve it as bootstrap style in the future.
 
-# Ragnarok: A small JavaScript Game 
+# Ragnarok: A small JavaScript Game
 http://159.89.124.219/Ragnarok.jsp
 
 Using JavaScript to make Thor move. Haven't finished yet.
