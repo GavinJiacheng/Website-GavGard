@@ -19,6 +19,7 @@ public class OutServlet  extends HttpServlet{
             return;
         }
         session.removeAttribute("nickname");
+        session.removeAttribute("id");
         response.sendRedirect("/index.jsp");
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,4 +27,3 @@ public class OutServlet  extends HttpServlet{
         doPost(request, response);
     }
 }
-

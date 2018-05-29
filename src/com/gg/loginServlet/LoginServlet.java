@@ -51,6 +51,7 @@ public class LoginServlet extends HttpServlet {
 			///cookie!!!
 			HttpSession session = request.getSession();
 			session.setAttribute("nickname", newuser.getnickname());
+			session.setAttribute("id", newuser.getid());
 			Cookie cookie = new Cookie("username",username);
 			cookie.setMaxAge(60*60*24);
 			response.addCookie(cookie);

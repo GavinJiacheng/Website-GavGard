@@ -1,5 +1,6 @@
 package com.gg.websocketservlet;
 
+import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -14,16 +15,19 @@ import com.gg.logindata.User;
 public class chatroomsocket {
 
     private static int onlineCount = 0;
-
+    public static ArrayList<String> allusersname = new ArrayList<String>();
     private static CopyOnWriteArraySet<chatroomsocket> setofclient = new CopyOnWriteArraySet<chatroomsocket>();
 
     private Session session;
+    private String nickname;
+    private String name_of_user;
+    private boolean isguest;
 
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) {
         HttpSession httpSession= (HttpSession) config.getUserProperties().get(HttpSession.class.getName());
-        String nickname = (String)httpSession.getAttribute("nickname");
-        boolean isguest = true;
+        nickname = (String)httpSession.getAttribute("nickname");
+        isguest = true;
         if (nickname != null){
           isguest = false;
         }
@@ -32,7 +36,6 @@ public class chatroomsocket {
         chatroomsocket.onlineCount++;
         //String nickname = session.getAttribute("nickname");
         Date now = new Date();
-        String name_of_user;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (isguest) {
           name_of_user = "GUEST";
@@ -43,11 +46,13 @@ public class chatroomsocket {
         for (chatroomsocket item : setofclient) {
             item.session.getAsyncRemote().sendText(name_of_user+" is joining in!    "+time);
         }
+        allusersname.add(name_of_user);
     }
 
     @OnClose
     public void onClose() {
         setofclient.remove(this);
+        allusersname.remove(name_of_user);
         chatroomsocket.onlineCount--;
     }
 
@@ -57,7 +62,7 @@ public class chatroomsocket {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = dateFormat.format(now);
         for (chatroomsocket item : setofclient) {
-                item.session.getAsyncRemote().sendText(message +"     "+time);
+                item.session.getAsyncRemote().sendText(name_of_user+": "+message +"     "+time);
         }
     }
 
