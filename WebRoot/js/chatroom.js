@@ -14,6 +14,16 @@ websocket.onopen = function () {
  function setMessageInnerHTML(innerHTML) {
 		document.getElementById('message').innerHTML += innerHTML + '<br/>';
 }
+
+function send() {
+		var message = document.getElementById('chat').value;
+		if (message != ""){
+			websocket.send(message);
+			document.getElementById('chat').value = "";
+		}
+ }
+
+/*
 function send(name) {
 	if (name == null) {
 			var username = "GUEST";
@@ -26,3 +36,4 @@ function send(name) {
 			document.getElementById('chat').value = "";
 		}
  }
+ */
