@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ page import="com.gg.Messagedata.*"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -93,8 +92,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     if (allmessagess != null && allmessagess.size() != 0){
                       for (Messagess item : allmessagess) {
                         out.println("<div style = 'background-color:#DCDCDC'>");
-                        out.println("<h3 style='padding-left:10px;padding-top:5px;'>"+item.getTitle()+"</h3>");
-                        out.println("<h6 style='padding-left:10px;display:inline;'> By "+ item.getName()+ " at " + item.getTime() + "</h6>");
+                        out.println("<h3 style='padding-left:10px;padding-top:5px;display:inline;'>"+item.getTitle()+"</h3>");
+                        out.println("<h6 style='padding-left:10px;display:inline;'> By"+ item.getName()+ " at " + item.getTime() + "</h6>");
                         out.println("<p style='padding-left:10px;padding-top:5px; padding-bottom:20px;'>"+ item.getMessage()+ "</p>");
                         out.println("</div>");
                       }
