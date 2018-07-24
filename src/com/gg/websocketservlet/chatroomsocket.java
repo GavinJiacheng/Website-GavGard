@@ -7,8 +7,12 @@ import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpSession;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
+import javax.json.Json;
+import javax.json.JsonReader;
 
 import com.gg.logindata.Userdata;
+
+
 import com.gg.logindata.User;
 
 @ServerEndpoint(value="/chatroom",configurator=GetHttpSessionConfigurator.class) //This is the url we need to write in jsp/js file.
@@ -44,7 +48,7 @@ public class chatroomsocket {
         }
         String time = dateFormat.format(now);
         for (chatroomsocket item : setofclient) {
-            item.session.getAsyncRemote().sendText(name_of_user+" is joining in!    "+time);
+            item.session.getAsyncRemote().sendText(name_of_user+" is joining in!    "+time); //send json rather than text directly
         }
         allusersname.add(name_of_user);
     }
@@ -54,6 +58,9 @@ public class chatroomsocket {
         setofclient.remove(this);
         allusersname.remove(name_of_user);
         chatroomsocket.onlineCount--;
+        //for (chatroomsocket item : setofclient) {
+        //    item.session.getAsyncRemote().sendText(name_of_user+" is joining in!    "+time);
+        //}
     }
 
     @OnMessage
@@ -62,7 +69,7 @@ public class chatroomsocket {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = dateFormat.format(now);
         for (chatroomsocket item : setofclient) {
-                item.session.getAsyncRemote().sendText(name_of_user+": "+message +"     "+time);
+                item.session.getAsyncRemote().sendText(name_of_user+": "+message +"     "+time); // send json
         }
     }
 

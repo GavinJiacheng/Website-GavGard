@@ -25,6 +25,10 @@
 		<servlet-name>MessageBoardServlet</servlet-name>
 		<servlet-class>com.gg.MessageBoardServlet.MessageServlet</servlet-class>
 	</servlet>
+    <servlet>
+        <servlet-name>CheckLogServlet</servlet-name>
+        <servlet-class>com.gg.loginServlet.CheckLogServlet</servlet-class>
+    </servlet>
 
 
 
@@ -48,6 +52,10 @@
 		<servlet-name>MessageBoardServlet</servlet-name>
 		<url-pattern>/MessageBoardServlet</url-pattern>
 	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckLogServlet</servlet-name>
+        <url-pattern>/CheckLogServlet</url-pattern>
+    </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

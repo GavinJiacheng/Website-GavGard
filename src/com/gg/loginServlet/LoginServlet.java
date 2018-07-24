@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("nickname", newuser.getnickname());
 			session.setAttribute("id", newuser.getid());
 			Cookie cookie = new Cookie("username",username);
-			cookie.setMaxAge(60*60*24);
+			cookie.setMaxAge(60*60*2);
 			response.addCookie(cookie);
 			request.setAttribute("msg", "Username: "+username+", log in successfully!");
 			request.getRequestDispatcher("/index.jsp").forward(request, response);

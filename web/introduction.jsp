@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 
   <body data-gr-c-s-loaded="true">
-
+    <script src="./js/LogCheck.js"></script>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="./index.jsp">GavGard</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <a class="nav-link" href="JavascrpitTest.jsp">Web Test</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Ragnarok.jsp">Game:Ragnarok</a>
+            <a class="nav-link" href="Ragnarok.html">Game:Ragnarok</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-target="#" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
@@ -61,19 +61,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
           </a>
 
-          <%
-          if(session.getAttribute("nickname") == null) {
-            out.println("<a class='btn btn-primary mr-sm-2'  href='login.jsp'>Log in</a>");
-            out.println("<a class='btn btn-primary mr-sm-2'  href='signup.jsp'>Sign up</a>");
-          }
-          else{
-            out.println("<li class='nav-item dropdown'>");
-            out.println("<a class='btn btn-primary mr-sm-2 dropdown-toggle' id='dropdown01' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>You</a>'");
-            out.println("<div class='dropdown-menu' aria-labelledby='dropdown02'>");
-            out.println("<a class='dropdown-item' href='/OutServlet'> Sign out</a>");
-            out.println("</div></li>");
-          }
-          %>
+          <div id = "log_check">
+        </div>
       </div>
     </nav>
 

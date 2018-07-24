@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <a class="nav-link" href="JavascrpitTest.jsp">Web Test</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Ragnarok.jsp">Game:Ragnarok</a>
+              <a class="nav-link" href="Ragnarok.html">Game:Ragnarok</a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" data-target="#" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community <span class="sr-only">(current)</span></a>

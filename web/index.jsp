@@ -14,14 +14,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta name="author" content="">
     <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-    <title>GavGard-Ragnarok</title>
+    <title>GavGard</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="./Bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="./cs/game.css"  rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Bootstrap/jumbotron.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 3.5rem;
+      }
+    </style>
 
   </head>
 
-  <body data-gr-c-s-loaded="true"  onkeydown = "checkaction(event)" onkeyup = "stopmoving(event)">
+  <body data-gr-c-s-loaded="true">
+    <script src="./js/LogCheck.js"></script>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="./index.jsp">GavGard</a>
@@ -31,8 +40,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.jsp">Home</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="introduction.jsp">Introduction</a>
@@ -40,8 +49,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <li class="nav-item">
             <a class="nav-link" href="JavascrpitTest.jsp">Web Test</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="Ragnarok.jsp">Game:Ragnarok <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="Ragnarok.html">Game:Ragnarok</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-target="#" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
@@ -54,43 +63,58 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <a class="text-muted" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
           </a>
-
-          <%
-          if(session.getAttribute("nickname") == null) {
-            out.println("<a class='btn btn-primary mr-sm-2'  href='login.jsp'>Log in</a>");
-            out.println("<a class='btn btn-primary mr-sm-2'  href='signup.jsp'>Sign up</a>");
-          }
-          else{
-            out.println("<li class='nav-item dropdown'>");
-            out.println("<a class='btn btn-primary mr-sm-2 dropdown-toggle' id='dropdown01' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>You</a>'");
-            out.println("<div class='dropdown-menu' aria-labelledby='dropdown02'>");
-            out.println("<a class='dropdown-item' href='/OutServlet'> Sign out</a>");
-            out.println("</div></li>");
-          }
-          %>
+          <div id = "log_check">
+        </div>
       </div>
     </nav>
+    <main role="main">
 
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Welcome to GavGard!!</h1>
+          <p>This is Gavin's website. It will show all information Gavin knows about computer science.
+          </br> Bootstrap makes this home page. Other pages on this website are using the CSS and JavaScript directly without any other technique.
+          </br> All pages will have the same style as this home page in the future.</p>
+          <p><a class="btn btn-primary btn-lg" href="introduction.jsp" role="button">Learn more »</a></p>
+        </div>
+      </div>
 
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Chatroom</h2>
+            <p>This is a simple chatroom which you can talk with others in this website. </p>
+            <p><a class="btn btn-secondary" href="chatroom.jsp" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Leave Your Messages</h2>
+            <p>Want to leave your messages to others? Click here! </p>
+            <p><a class="btn btn-secondary" href="Messageboard.jsp" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Ragnarok</h2>
+            <p>Ragnarok is a very small website game which is made by JavaScript and HTML5. Want to play? Click here! </p>
+            <p><a class="btn btn-secondary" href="Ragnarok.jsp" role="button">View details »</a></p>
+          </div>
+        </div>
 
-    <div class = "gamebox">
-        <h2> Ragnarok </h2>
-          <p> please press 'x' to attack, and press directiion keys to move! </p>
-            <img id= "Thor" src = "Ragnarok/viking/stance.gif"/>
-    </div>
+        <hr>
 
+      </div> <!-- /container -->
 
+    </main>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-            <p style="color:white">© GavGard 2018 by Jiacheng Xu.</p>
-    </nav>
+    <footer class="container">
+      <p>© GavGard 2018 by Jiacheng Xu.</p>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="Bootstrap/bootstrap.min.js"></script>
-    <script src="js/Ragnarok.js"></script>
 
 
 </body></html>
