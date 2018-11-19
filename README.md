@@ -8,6 +8,9 @@ It contains three primary functions now.
 
 I deleted some bootstrap files, if there are some bugs happen. Just download whole bootstrap files to the bootstrap folder. 
 
+THIS THE LINK OF THE WEBSITE IS NOT THE NEWEST VERSION.
+THE NEWEST CODE OF THIS WEBSITE IS ON THIS PAGE, MY GITHUB, RATHER THAN THE WEBSITE.
+
 # Message Board
 
 http://159.89.124.219/Messageboard.jsp
