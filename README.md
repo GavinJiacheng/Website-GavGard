@@ -28,12 +28,12 @@ Will add delete function in the future.
 http://159.89.124.219/chatroom.jsp
 
 Using websocket to create page.
-I know its UI is very bad. I will improve it as bootstrap style in the future.
+I know its UI is very bad. I will improve it in the future.
 
 # Ragnarok: A small JavaScript Game
 http://159.89.124.219/Ragnarok.jsp
 
-Using JavaScript to make Thor move. Haven't finished yet.
+Using JavaScript to make Thor move and attack. you can find its Js code here: https://github.com/Jiachenggavin/Games_Js
 
 # About this website
 All the pages are written in the original CSS3 and JavaScript without any architecture.
