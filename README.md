@@ -2,6 +2,8 @@
 
 <span style="color:red"> **Notice: I shut down the server in 2018, the link is not availabe anymore.** </span>
 
+<span style="color:red"> **If you want to see and test this website, you need to run this code on one Apache Tomcat server.** </span>
+
 http://159.89.124.219/
 
 A website application which is written in Java and Using Tomcat to build this website.
