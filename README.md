@@ -1,5 +1,7 @@
 # GavGard-web
 
+<span style="color:red"> **Notice: I shut down the server in 2018, the link is not availabe anymore.** </span>
+
 http://159.89.124.219/
 
 A website application which is written in Java and Using Tomcat to build this website.
