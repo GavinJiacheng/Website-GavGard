@@ -4,7 +4,6 @@
 
 <span style="color:red"> **If you want to see and test this website, you need to run this code on one Apache Tomcat server.** </span>
 
-http://159.89.124.219/
 
 A website application which is written in Java and Using Tomcat to build this website.
 
@@ -17,21 +16,16 @@ THE NEWEST CODE OF THIS WEBSITE IS ON THIS PAGE, MY GITHUB, RATHER THAN THE WEBS
 
 # Message Board
 
-http://159.89.124.219/Messageboard.jsp
-
-
 Using MySQL to store the information of messages. Now it can show the title, text, writer and time.
 
 Will add delete function in the future.
 
 # Chatroom
-http://159.89.124.219/chatroom.jsp
 
 Using websocket to create page.
 I know its UI is very bad. I will improve it in the future.
 
 # Ragnarok: A small JavaScript Game
-http://159.89.124.219/Ragnarok.jsp
 
 Using JavaScript to make Thor move and attack. you can find its Js code here: https://github.com/Jiachenggavin/Games_Js
 
