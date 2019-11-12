@@ -26,7 +26,11 @@ Using websocket to create page.
 I know its UI is very bad. I will improve it in the future.
 
 # Ragnarok: A small JavaScript Game
+You can play it here:
+<br />
+https://jiachenggavin.github.io/Games_Js/
 
+<br />
 Using JavaScript to make Thor move and attack. you can find its Js code here: https://github.com/Jiachenggavin/Games_Js
 
 # About this website
