@@ -1,8 +1,11 @@
 # GavGard-web
 
-<span style="color:red"> **Notice: I shut down the server in 2018, the link is not availabe anymore.** </span>
+<span style="color:red"> *You can access these static web: https://jiachenggavin.github.io/Website-GavGard/., which is pruely HTML without any backend code** </span>
+
+<span style="color:red"> **Notice: I shut down the server in 2018, the full version of the website is not availabe anymore.** </span>
 
 <span style="color:red"> **If you want to see and test this website, you need to run this code on one Apache Tomcat server.** </span>
+
 
 
 A website application which is written in Java and Using Tomcat to build this website.
