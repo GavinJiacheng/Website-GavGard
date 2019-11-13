@@ -1,0 +1,15 @@
+div.gamebox {
+  text-align:center;
+  height:800px;
+  width:auto;
+  padding-top: 10rem;
+}
+
+
+
+#Thor {
+  position: relative;
+  left:0px;
+  background-color: transparent;
+  margin-top:200px;
+}

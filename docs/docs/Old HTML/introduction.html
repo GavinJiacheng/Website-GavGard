@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <script>
+    function web() {
+    document.getElementById("intr").innerHTML = "This website is a demonstration of HTML5/CSS3 and Javascript by Gavin Xu. This website will contain all the information that I know about said scripting languages.";
+    }
+    function Xu() {
+    document.getElementById("intr").innerHTML = "Gavin Xu is the smartest and most handsome student at SFU. Gavin is majoring in computing science.";
+    }
+    function Meaning() {
+    document.getElementById("intr").innerHTML = "GavGard stands for 'Gavin's Garden' which is similar to the word 'Asgard' which means 'Garden of Æsir' (Æsir is the collective term for the gods in Norse mythology)";
+    }
+    function cites() {
+    document.getElementById("intr").innerHTML = "The background picture shows Constantinople, the 'queen of cities'. </br> </br> The background music is 'The Ring Goes South' which is the music of the movie 'The Lord Of Rings'.";
+    }
+    function future() {
+    document.getElementById("intr").innerHTML = "I am going to test some javascript code for this website. My plan is to make a sign up/log in system that allows people to leave messages on the website, which needs some knowledge about python or PHP.";
+    }
+    function Ragnarok() {
+    document.getElementById("intr").innerHTML = "You know Ragnarok in Norse mythology, right? You don't know Norse mythology? So do you know Ragnarok in Marvel's commics and movies? You don't know? OMG please kill me. </br> </br> Anyway, as same as the Ragnarok happen in Asgard, there are some very very very bad guys want to attack Gavgard. Thor, 'Odin son', is coming to help us. The Ragnarok is a small game which is made by javascript.";
+    }
+    </script>
+  </head>
+<body background="./img/Background.jpg">
+  <div id = "container">
+    <div id = "page">
+      <audio id="myAudio" autoplay="autoplay" loop = "loop">
+        <source src="music/The Fellowship of the Ring Soundtrack-11-The Ring Goes South.ogg" type="audio/ogg" />
+        <source src="music/The Fellowship of the Ring Soundtrack-11-The Ring Goes South.mp3" type="audio/mpeg" />
+      </audio>
+      <header>
+        <div id = "header-top">
+          <div id = "header-top-right">
+              <ul class = "horizontal">
+                <li class = "right cwhite"> <a href = "https://www.sfu.ca/" title = "SFU"> SFU </a>
+                </li>
+                <li class = "right cwhite"> <a href = "https://www.facebook.com/jason.hsu.1994" title = "Gavin's FB"> Gavin's FB </a>
+                </li>
+                <li class = "right cwhite"> <a href = "https://github.com/Jiachenggavin" title = "Gavin's Git"> Gavin's Git </a>
+                </li>
+              </ul>
+          </div>
+        <div id = "play" onclick="playAudio()"></div>
+        </div>
+        <div id = "header-middle">
+            <a href = "./index.html" title = "home" ><img src="./img/logo.png"/> </a>
+            <form id = "googlesearch" class = "right" method="get" action="https://www.google.ca/search?q=" target="_blank">
+              Search Google:
+                <input type="text" name="q" maxlength="255" placeholder="Search in the site">
+                <input type = "submit", value="Search">
+            </form>
+        </div>
+        <div class = "header-middle">
+        <div id = "header-bottom">
+          <ul class = "horizontal">
+            <li class = "bottomleft "><a href = "introduction.html" title = "INTRODUCTION"> INTRODUCTION </a> </li>
+            <li class = "bottomleft "><a href = "JavascrpitTest.html" title = "JAVASCRIPT EXAMPLE"> JAVASCRIPT EXAMPLE </a></li>
+            <li class = "bottomleft "><a href = "Ragnarok.html" title = "RAGNAROK"> RAGNAROK </a>
+            <li class = "bottomleft "><a href = "#" title = "TO BE CONTINUED"> TO BE CONTINUED </a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+        <div id = "txt" class = "introduction">
+          <nav id = "leftside">
+            <p class = "leftlist" onclick="web()"> What is this website? </p> <br>
+            <p class = "leftlist" onclick="Xu()"> Who is Gavin Xu? </p> <br>
+            <p class = "leftlist" onclick="Meaning()"> The meaning of 'GavGard' </p> <br>
+            <p class = "leftlist" onclick="Ragnarok()"> What is the Ragnarok? </p> <br>
+            <p class = "leftlist" onclick="cites()"> Music and pictures? </p> <br>
+            <p class = "leftlist" onclick="future()"> What will become of this website?  </p> <br>
+          </nav>
+          <section id = "content">
+            <p id= "intr">
+                Which part of this website are you curious about? Please select an option from the menu on the left.
+            </p>
+          </section>
+        </div>
+      </div>
+     <footer>©Gavgard 2018 by Jiacheng Xu.</footer>
+   </div>
+      <script src="js/myjs.js"></script>
+  </body>
+</html>
