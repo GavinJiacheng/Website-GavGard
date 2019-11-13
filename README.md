@@ -6,6 +6,8 @@
 
 <span style="color:red"> **If you want to see and test this website, you need to run this code on one Apache Tomcat server.** </span>
 
+<span style="color:red"> **The "community" button on the html version won't work since it has no back-end code runing, same as the log in and register functions.** </span>
+
 
 
 A website application which is written in Java and Using Tomcat to build this website.
