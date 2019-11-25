@@ -1,49 +1,52 @@
 # GavGard-web
 
-<span style="color:red"> **You can access these static web: https://jiachenggavin.github.io/Website-GavGard/, which is pruely HTML without any backend code** </span>
+<span style="color:red"> **Static web can be acessed via this link: https://jiachenggavin.github.io/Website-GavGard/. The website is written with HTML. No backend code used for the website** </span>
 
-<span style="color:red"> **Notice: I shut down the server in 2018, the full version of the website is not availabe anymore.** </span>
+<span style="color:red"> **Notice: The server is shut down in 2018. The full version of the website is not availabe anymore.** </span>
 
-<span style="color:red"> **If you want to see and test this website, you need to run this code on one Apache Tomcat server.** </span>
+<span style="color:red"> **To test GavGard website, run the code on one Apache Tomcat server.** </span>
 
-<span style="color:red"> **The "community" button on the html version won't work since it has no back-end code runing, same as the log in and register functions.** </span>
+<span style="color:red"> **The "community" button on the HTML version will not work since there is no back-end code running. Log in and register functions on HTML version will not work as well due to the same reason.** </span>
 
 
 
 A website application which is written in Java and Using Tomcat to build this website.
 
-It contains three primary functions now.
+It contains three primary functions.
 
-I deleted some bootstrap files, if there are some bugs happen. Just download whole bootstrap files to the bootstrap folder. 
+Some bootstrap files are deleted to avoid encountering bugs. Download whole bootstrap files to the bootstrap folder. 
 
 THIS THE LINK OF THE WEBSITE IS NOT THE NEWEST VERSION.
-THE NEWEST CODE OF THIS WEBSITE IS ON THIS PAGE, MY GITHUB, RATHER THAN THE WEBSITE.
+THE NEWEST CODE OF THIS WEBSITE IS ON THIS PAGE, MY GITHUB. THE WEBSITE DOES NOT HAVE THE NEWEST CODE.
 
 # Message Board
 
-Using MySQL to store the information of messages. Now it can show the title, text, writer and time.
+MySQL is used to store the information of messages. The title, text, writer and time can be viewed.
 
-Will add delete function in the future.
+Delete functionality will be added in the future.
 
 # Chatroom
 
-Using websocket to create page.
-I know its UI is very bad. I will improve it in the future.
+Websocket is used to create page.
+UI is currently visually unpleasing. UI is planned to be improved in future.
 
 # Ragnarok: A small JavaScript Game
-You can play it here:
+Click here to play:
 <br />
 https://jiachenggavin.github.io/Games_Js/
 ![Alt text](https://github.com/Jiachenggavin/Games_Js/blob/master/screenshot/die.png)
-Using JavaScript to make Thor move and attack. you can find its Js code here: https://github.com/Jiachenggavin/Games_Js
+JavaScript is used to move Thor and attack. 
+Click here to see the JavaScript: https://github.com/Jiachenggavin/Games_Js
 
 # About this website
-All the pages are written in the original CSS3 and JavaScript without any architecture.
+All the pages are written in the original CSS3 and JavaScript. No external architecture is used.
 
-This website is just for testing and improving my coding skills for the website.
+The website was built for testing and improving my coding skills.
 
-The UI of the home page is improving now. My plan is using bootstrap to make it more beautiful.
+UI of the home page is getting improved by each iteration. 
 
-Other pages will be improved in the future, too.
+Bootstrap is planned to be used to make the website more beautiful.
+
+Other pages will be improved in the future.
 
 The next plan is re-writing all JSP files to Ajax.
